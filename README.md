@@ -25,7 +25,7 @@ Este es un traductor de idiomas de escritorio desarrollado con Python, inspirado
 Desplegables personalizados para elegir entre más de 20 idiomas populares.
 
 
-#Tecnologías utilizadas
+# Tecnologías utilizadas
 
 Python 3 — Lenguaje principal para la lógica y ejecución del programa.
 
