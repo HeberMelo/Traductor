@@ -2,7 +2,7 @@ import customtkinter as ctk
 import tkinter.messagebox as messagebox
 from googletrans import Translator
 
-# Diccionario de idiomas
+
 IDIOMAS_NOMBRES = {
     "Detectar idioma": "auto",
     "Afrikáans": "af",
@@ -31,11 +31,11 @@ IDIOMAS_NOMBRES = {
     "Vietnamita": "vi"
 }
 
-# Apariencia
+
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
-# Función de traducción
+
 def traducir(texto, idioma_destino):
     translator = Translator()
     try:
@@ -44,7 +44,7 @@ def traducir(texto, idioma_destino):
     except Exception as e:
         return f"Error al traducir: {str(e)}"
 
-# Iniciar interfaz
+
 def iniciar_interfaz():
     class TraductorApp(ctk.CTk):
         def __init__(self):
@@ -59,7 +59,7 @@ def iniciar_interfaz():
             self.crear_widgets()
 
         def crear_widgets(self):
-            # Frame superior con selectores y botón de intercambio
+         
             frame_top = ctk.CTkFrame(self, fg_color="transparent")
             frame_top.place(relx=0.5, y=20, anchor="n")
 
@@ -83,7 +83,7 @@ def iniciar_interfaz():
             )
             self.selector_destino.grid(row=0, column=2, padx=(10, 0))
 
-            # Cuadros de texto
+         
             self.frame_textos = ctk.CTkFrame(self, fg_color="transparent")
             self.frame_textos.place(x=50, y=70)
 
@@ -94,7 +94,7 @@ def iniciar_interfaz():
             self.salida = ctk.CTkTextbox(self.frame_textos, width=400, height=250)
             self.salida.grid(row=0, column=1, padx=(0, 0))
 
-            # Botones Copiar y Limpiar centrados abajo
+            
             frame_botones = ctk.CTkFrame(self, fg_color="transparent")
             frame_botones.place(relx=0.5, rely=0.85, anchor="center")
 
